@@ -2,16 +2,11 @@ package moodanalyser;
 
 public class MoodAnalyserMain 
 {
-	//Method to return mood based on message
-	public String analyseMood(String message)
+	public static void main(String args[])
 	{
-		if(message.contains("sad"))
-		{
-			return "SAD";
-		}
-		else
-		{
-			return "HAPPY";
-		}
+		MoodAnalyser moodAnalyser = new MoodAnalyser();
+		String message = "I am in happy mood";
+		String mood = moodAnalyser.analyseMood(message);
+		System.out.println(mood);
 	}
 }
